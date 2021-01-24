@@ -1,7 +1,16 @@
 'use strict'
 {
+  //21.特定の日時を扱ってみよう
+  const d = new Date(2019, 10);
+  d.setHours(10, 20, 30);
+  d.setDate(d.getDate() + 3);
+  console.log(d);
+  //20.現在に知事を扱ってみよう
+  // const d = new Date();
+  // console.log(d);
+  // console.log(`${d.getMonth() + 1}月 ${d.getDate()}日`);
   //19.ランダムな整数値を作ってみよう
-  console.log(Math.floor(Math.random() * 6) + 1);
+  // console.log(Math.floor(Math.random() * 6) + 1);
   //18.数値を操作してみよう
   // const scores = [10, 3, 9];
   // let sum = 0;
