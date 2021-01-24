@@ -1,16 +1,102 @@
 'use strict'
 {
+
+  //29.クラスの概念を理解しよう
+  // constractで初期化、引数でインスタンスを作成
+
+  //28. メソッドを使ってみよう
+  const posts = [
+    {
+      text: 'JavaScriptの勉強中・・・',
+      likeCount: 0,
+      show() {
+        console.log(`${this.text} - ${this.likeCount}いいね`);
+      },
+    },
+    {
+      text: 'プログラミング楽しい！',
+      likeCount: 0,
+      show() {
+        console.log(`${this.text} - ${this.likeCount}いいね`);
+      },
+    },
+  ];
+  posts[0].show();
+  posts[1].show();
+
+  //27.オブジェクトが複数ある場合を考えよう
+  // const posts = [
+  //   {
+  //     text: 'JavaScriptの勉強中・・・',
+  //     likeCount: 0,
+  //   },
+  //   {
+  //     text: 'プログラミング楽しい！',
+  //     likeCount: 0.
+  //   },
+  // ];
+  // function show(post) {
+  //   console.log(`${post.text} - ${post.likeCount}いいね`);
+  // }
+  // show(posts[0]);
+
+  //26.例外処理を使ってみよう
+  // const name = 5;
+  // try {
+  //   console.log(name.toUpperCase());
+  // } catch (e) {
+  //   console.log(e);
+  // }
+  // console.log('Finish!');
+
+  //25.タイマー処理の違いを理解しよう
+  //setIntervalは処理を始めてからの秒数で、setTimeoutは処理が終わってからの秒数
+
+  //24.setTimeout()を使ってみよう
+  // let i = 0
+  // function showTime() {
+  //   console.log(new Date());
+  //   const timeoutId = setTimeout(showTime, 1000);
+  //   i++;
+  //   if (i > 2) {
+  //     clearTimeout(timeoutId);
+  //   }
+  // }
+  // showTime();
+
+  //23.setInterval()を使ってみよう
+  // let i = 0
+  // function showTime() {
+  //   console.log(new Date());
+  //   i++;
+  //   if (i > 5) {
+  //     clearInterval(intervalId);
+  //   }
+  // }
+  // const intervalId = setInterval(showTime, 1000);
+
+  //22.alert()、confirm()を使ってみよう
+  // alert('Hello');
+  // const answer = confirm('削除しますか？');
+  // if (answer) {
+  //   console.log('削除しました');
+  // } else {
+  //   console.log('キャンセルしました');
+  // }
+
   //21.特定の日時を扱ってみよう
-  const d = new Date(2019, 10);
-  d.setHours(10, 20, 30);
-  d.setDate(d.getDate() + 3);
-  console.log(d);
+  // const d = new Date(2019, 10);
+  // d.setHours(10, 20, 30);
+  // d.setDate(d.getDate() + 3);
+  // console.log(d);
+
   //20.現在に知事を扱ってみよう
   // const d = new Date();
   // console.log(d);
   // console.log(`${d.getMonth() + 1}月 ${d.getDate()}日`);
   //19.ランダムな整数値を作ってみよう
   // console.log(Math.floor(Math.random() * 6) + 1);
+
   //18.数値を操作してみよう
   // const scores = [10, 3, 9];
   // let sum = 0;
@@ -24,14 +110,12 @@
   // console.log(Math.ceil(avg));
   // console.log(Math.round(avg));
   // console.log(avg.toFixed(3));
-
   // console.log(Math.random());
 
   //17,join()、split()を使ってみよう
   // const d = [2019, 11, 14];
   // console.log(d.join('/'));
   // console.log(d.join(''));
-
   // const t = '17:08:24';
   // console.log(t.split(':'));
   // const [hour, minute, second] = t.split(':');
@@ -46,53 +130,44 @@
   // console.log(str[1]);
 
   //15.変数を代入してみよう
-
   // let x = 1;
   // let y = x;
   // x = 5;
   // console.log(x);
   // console.log(y);
-
   // let x = [1, 2];
   // let y = x;
   // x[0] = 5;
   // console.log(x);
   // console.log(y);
-
   // let x = [1, 2];
   // let y = [...x];
   // x[0] = 5;
   // console.log(x);
   // console.log(y);
 
-
   //14.Object.keys()を使ってみよう
   // const keys = Object.keys(point);
   // keys.forEach(key => {
   //   console.log(`Key: ${key} Value: ${point[key]}`);
   // });
-
   // const points = [
   //   { x: 30, y: 20 },
   //   { x: 10, y: 50 },
   //   { x: 40, y: 40 },
   // ];
-
   // console.log(points[1].y);
-
 
   //13.オブジェクトを操作してみよう
   // const otherProps = {
   //   r: 4,
   //   color: 'red',
   // };
-
   // const point = {
   //   x: 100,
   //   y: 180,
   //   ...otherProps,
   // };
-
   // const { x, r, ...others } = point;
   // console.log(x);
   // console.log(r);
@@ -103,17 +178,13 @@
   //   x: 100,
   //   y: 180,
   // };
-
   // point.x = 120;
-
   // point.z = 90;
   // delete point.y;
   // console.log(point);
 
-
   //11.objectを作ってみよう
   // const point = [100, 180];
-
   // const point = {
   //   x: 100,
   //   y: 180,
