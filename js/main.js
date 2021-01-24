@@ -1,10 +1,15 @@
 'use strict'
 
 {
-  const scores = [80, 90, 30, 70];
-  scores.splice(1, 1, 40, 50);
+  const numbers = [1, 4, 7, 8, 10];
 
-  for (let i = 0; i < scores.length; i++) {
-    console.log(`Score ${i}: ${scores[i]}`);
-  }
+  // const evenNumbers = numbers.filter(number => {
+  //   if (number % 2 === 0) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // });
+  const evenNumbers = numbers.filter(number => number % 2 === 0);
+  console.log(evenNumbers);
 }
