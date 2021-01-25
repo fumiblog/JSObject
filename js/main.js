@@ -1,5 +1,7 @@
 'use strict'
 {
+  //32.静的メソッドを使ってみよう
+
   //31.カプセル化を理解しよう
   class Post {
     constructor(text) {
