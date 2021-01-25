@@ -1,8 +1,6 @@
 'use strict'
 {
-  //32.静的メソッドを使ってみよう
-
-  //31.カプセル化を理解しよう
+  //クラスを継承してみよう
   class Post {
     constructor(text) {
       this.text = text;
@@ -17,11 +15,113 @@
       this.show();
     }
   }
+
+  class SponsoredPost extends Post {
+    constructor(text, sponsor) {
+      super(text);
+      this.sponsor = sponsor;
+    }
+
+    show() {
+      super.show();
+      console.log(`...sponsored by ${this.sponsor}`);
+    }
+  }
   const posts = [
     new Post('JavaScriptの勉強中・・・'),
     new Post('プログラミング楽しい！'),
+    new SponsoredPost('3分間動画でマスターしよう', 'dotinstall'),
   ];
-  posts[0].like();
+
+  posts[2].show();
+  posts[2].like();
+
+  //クラスを拡張したい場合を考えよう
+  // class Post {
+  //   constructor(text) {
+  //     this.text = text;
+  //     this.likeCount = 0;
+  //   }
+
+  //   show() {
+  //     console.log(`${this.text} - ${this.likeCount} likes`);
+  //   }
+  //   like() {
+  //     this.likeCount++
+  //     this.show();
+  //   }
+  // }
+
+  // class SponsoredPost {
+  //   constructor(text, sponsor) {
+  //     this.text = text;
+  //     this.likeCount = 0;
+  //     this.sponsor = sponsor;
+  //   }
+
+  //   show() {
+  //     console.log(`${this.text} - ${this.likeCount} likes`);
+  //     console.log(`...sponsored by ${this.sponsor}`);
+  //   }
+  //   like() {
+  //     this.likeCount++
+  //     this.show();
+  //   }
+  // }
+  // const posts = [
+  //   new Post('JavaScriptの勉強中・・・'),
+  //   new Post('プログラミング楽しい！'),
+  //   new SponsoredPost('3分間動画でマスターしよう', 'dotinstall'),
+  // ];
+
+  // posts[2].show();
+  // posts[2].like();
+
+  //32.静的メソッドを使ってみよう
+  // class Post {
+  //   constructor(text) {
+  //     this.text = text;
+  //     this.likeCount = 0;
+  //   }
+
+  //   show() {
+  //     console.log(`${this.text} - ${this.likeCount} likes`);
+  //   }
+  //   like() {
+  //     this.likeCount++
+  //     this.show();
+  //   }
+  //   static showInfo() {
+  //     console.log('post class version 1.0');
+  //   }
+  // }
+  // const posts = [
+  //   new Post('JavaScriptの勉強中・・・'),
+  //   new Post('プログラミング楽しい！'),
+  // ];
+  // Post.showInfo();
+  // posts[0].like();
+
+  //31.カプセル化を理解しよう
+  // class Post {
+  //   constructor(text) {
+  //     this.text = text;
+  //     this.likeCount = 0;
+  //   }
+
+  //   show() {
+  //     console.log(`${this.text} - ${this.likeCount} likes`);
+  //   }
+  //   like() {
+  //     this.likeCount++
+  //     this.show();
+  //   }
+  // }
+  // const posts = [
+  //   new Post('JavaScriptの勉強中・・・'),
+  //   new Post('プログラミング楽しい！'),
+  // ];
+  // posts[0].like();
   // posts[0].show();
   // posts[1].show();
 
