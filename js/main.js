@@ -1,28 +1,68 @@
 'use strict'
 {
+  //31.カプセル化を理解しよう
+  class Post {
+    constructor(text) {
+      this.text = text;
+      this.likeCount = 0;
+    }
+
+    show() {
+      console.log(`${this.text} - ${this.likeCount} likes`);
+    }
+    like() {
+      this.likeCount++
+      this.show();
+    }
+  }
+  const posts = [
+    new Post('JavaScriptの勉強中・・・'),
+    new Post('プログラミング楽しい！'),
+  ];
+  posts[0].like();
+  // posts[0].show();
+  // posts[1].show();
+
+  //30.クラスを作ってみよう
+  // class Post {
+  //   constructor(text) {
+  //     this.text = text;
+  //     this.likeCount = 0;
+  //   }
+
+  //   show() {
+  //     console.log(`${this.text} - ${this.likeCount}いいね`);
+  //   }
+  // }
+  // const posts = [
+  //   new Post('JavaScriptの勉強中・・・'),
+  //   new Post('プログラミング楽しい！'),
+  // ];
+  // posts[0].show();
+  // posts[1].show();
 
   //29.クラスの概念を理解しよう
   // constractで初期化、引数でインスタンスを作成
 
   //28. メソッドを使ってみよう
-  const posts = [
-    {
-      text: 'JavaScriptの勉強中・・・',
-      likeCount: 0,
-      show() {
-        console.log(`${this.text} - ${this.likeCount}いいね`);
-      },
-    },
-    {
-      text: 'プログラミング楽しい！',
-      likeCount: 0,
-      show() {
-        console.log(`${this.text} - ${this.likeCount}いいね`);
-      },
-    },
-  ];
-  posts[0].show();
-  posts[1].show();
+  // const posts = [
+  //   {
+  //     text: 'JavaScriptの勉強中・・・',
+  //     likeCount: 0,
+  //     show() {
+  //       console.log(`${this.text} - ${this.likeCount}いいね`);
+  //     },
+  //   },
+  //   {
+  //     text: 'プログラミング楽しい！',
+  //     likeCount: 0,
+  //     show() {
+  //       console.log(`${this.text} - ${this.likeCount}いいね`);
+  //     },
+  //   },
+  // ];
+  // posts[0].show();
+  // posts[1].show();
 
   //27.オブジェクトが複数ある場合を考えよう
   // const posts = [
